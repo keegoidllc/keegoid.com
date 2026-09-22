@@ -63,3 +63,6 @@ content/about-me.md
 # Claude Code local config
 .claude/
 .wrangler/
+
+# Private source and invitation code for encrypted personal introduction
+/.private-about/
