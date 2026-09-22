@@ -22,5 +22,5 @@ const salt = randomBytes(16), iv = randomBytes(12), iterations = 600000;
 const key = pbkdf2Sync(code, salt, iterations, 32, 'sha256');
 const cipher = createCipheriv('aes-256-gcm', key, iv);
 const ciphertext = Buffer.concat([cipher.update(JSON.stringify(profile), 'utf8'), cipher.final(), cipher.getAuthTag()]);
-await writeFile(resolve(output,'payload.json'), JSON.stringify({version:1,iterations,salt:salt.toString('base64'),iv:iv.toString('base64'),ciphertext:ciphertext.toString('base64')})+'\n');
+await writeFile(resolve(output,'payload.bin'), Buffer.concat([Buffer.from([1]), salt, iv, ciphertext]));
 console.log('Encrypted profile built. Invitation code stays in .private-about/invitation-code.txt.');

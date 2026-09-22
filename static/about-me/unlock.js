@@ -17,13 +17,15 @@ document.querySelector('#unlock').addEventListener('submit', async event => {
   event.preventDefault(); submit.disabled = true; message.textContent = 'Opening…';
   try {
     if (!window.crypto?.subtle) throw new Error('unsupported');
-    const response = await fetch('./payload.json', {cache:'no-store',credentials:'omit'});
+    const response = await fetch('./payload.bin', {cache:'no-store',credentials:'omit'});
     if (!response.ok) throw new Error('unavailable');
-    const payload = await response.json();
+    const packed = new Uint8Array(await response.arrayBuffer());
+    if (packed.length < 45) throw new Error('invalid');
+    const payload = {version:packed[0],iterations:600000,salt:packed.slice(1,17),iv:packed.slice(17,29),ciphertext:packed.slice(29)};
     if (payload.version !== 1 || payload.iterations !== 600000) throw new Error('unsupported');
     const material = await crypto.subtle.importKey('raw', new TextEncoder().encode(code.value.trim()), 'PBKDF2', false, ['deriveKey']);
-    const key = await crypto.subtle.deriveKey({name:'PBKDF2',hash:'SHA-256',salt:bytes(payload.salt),iterations:payload.iterations},material,{name:'AES-GCM',length:256},false,['decrypt']);
-    const clear = await crypto.subtle.decrypt({name:'AES-GCM',iv:bytes(payload.iv)},key,bytes(payload.ciphertext));
+    const key = await crypto.subtle.deriveKey({name:'PBKDF2',hash:'SHA-256',salt:payload.salt,iterations:payload.iterations},material,{name:'AES-GCM',length:256},false,['decrypt']);
+    const clear = await crypto.subtle.decrypt({name:'AES-GCM',iv:payload.iv},key,payload.ciphertext);
     const data = JSON.parse(new TextDecoder().decode(clear));
     if (typeof data.title !== 'string' || !Array.isArray(data.paragraphs) || !data.paragraphs.every(p => typeof p === 'string')) throw new Error('invalid');
     document.querySelector('#heading').textContent = data.title;

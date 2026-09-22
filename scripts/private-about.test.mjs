@@ -14,7 +14,8 @@ test('encrypted profile: correct code, wrong code, tampering, fresh salt and IV'
   await writeFile(join(root,'.private-about/profile.json'),JSON.stringify(expected));
   const build=()=>execFileSync(process.execPath,[join(root,'scripts/build-private-about.mjs')]);build();
   const code=(await readFile(join(root,'.private-about/invitation-code.txt'),'utf8')).trim();
-  const raw=await readFile(join(root,'static/about-me/payload.json'),'utf8'),p=JSON.parse(raw);
+  const unpack=b=>({version:b[0],iterations:600000,salt:b.subarray(1,17).toString('base64'),iv:b.subarray(17,29).toString('base64'),ciphertext:b.subarray(29).toString('base64')});
+  const raw=await readFile(join(root,'static/about-me/payload.bin')),p=unpack(raw);
   assert(!raw.includes(code));assert(!raw.includes(expected.title));assert.equal(code.length,24);
   async function decrypt(secret, data=p) {
    const material=await webcrypto.subtle.importKey('raw',new TextEncoder().encode(secret),'PBKDF2',false,['deriveKey']);
@@ -25,7 +26,7 @@ test('encrypted profile: correct code, wrong code, tampering, fresh salt and IV'
   await assert.rejects(decrypt('wrong-code'));
   const corrupt=Buffer.from(p.ciphertext,'base64');corrupt[0]^=1;
   await assert.rejects(decrypt(code,{...p,ciphertext:corrupt.toString('base64')}));
-  build();const fresh=JSON.parse(await readFile(join(root,'static/about-me/payload.json'),'utf8'));
+  build();const fresh=unpack(await readFile(join(root,'static/about-me/payload.bin')));
   assert.notEqual(fresh.salt,p.salt);assert.notEqual(fresh.iv,p.iv);assert.deepEqual(await decrypt(code,fresh),expected);
   await writeFile(join(root,'.private-about/invitation-code.txt'),'1234');
   assert.throws(build);
