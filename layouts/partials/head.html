@@ -28,7 +28,8 @@
   {{ $styleSyntax := resources.Get "css/syntax.css" }}
   {{ $styles := slice $styleSyntax $styleMain | resources.Concat "css/style.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="icon" type="image/png" sizes="64x64" href="/images/brand/keegoid-tile-64.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/brand/keegoid-touch-icon.png">
+  <link rel="icon" href="/favicon.ico?v={{ readFile "static/favicon.ico" | sha256 | truncate 12 "" }}" sizes="16x16 32x32 48x48 64x64 128x128 256x256">
+  <link rel="icon" type="image/png" sizes="64x64" href="/images/brand/keegoid-tile-64.png?v={{ readFile "static/images/brand/keegoid-tile-64.png" | sha256 | truncate 12 "" }}">
+  <link rel="icon" href="/favicon.svg?v={{ readFile "static/favicon.svg" | sha256 | truncate 12 "" }}" type="image/svg+xml" sizes="any">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/brand/keegoid-touch-icon.png?v={{ readFile "static/images/brand/keegoid-touch-icon.png" | sha256 | truncate 12 "" }}">
 </head>

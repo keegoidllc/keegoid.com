@@ -1,12 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1706 441" role="img" aria-labelledby="brand-title brand-description">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="105 80 1491 321" role="img" aria-labelledby="brand-title brand-description">
   <title id="brand-title">Keegoid LLC</title>
-  <desc id="brand-description">Alien Artifact identity traced from the approved original, preserving its bracket spacing and custom eegoid letter contours.</desc>
+  <desc id="brand-description">Alien Artifact identity traced from the approved original, with a standalone purple K and the original custom eegoid letter contours.</desc>
   <g id="brand-icon" transform="translate(40 19.5) scale(4.02)">
     <g transform="translate(0 5.099502487562189) scale(0.24875621890547264)">
-      <g transform="translate(0.000000,361.000000) scale(0.100000,-0.100000)" fill="#16151B" stroke="none">
-        <path d="M232 3377 l-232 -232 0 -1340 0 -1340 233 -233 232 -232 313 0 312 0 0 88 1 87 -168 162 -168 163 -83 0 -84 0 -59 51 -59 52 0 266 0 266 110 110 110 110 0 415 0 415 -110 110 -110 110 0 301 0 302 59 51 59 51 82 0 82 0 169 161 169 162 0 88 0 89 -313 0 -312 0 -233 -233z" />
-        <path d="M2935 3523 l7 -88 161 -162 162 -163 78 0 79 0 64 -51 64 -51 0 -303 0 -303 -110 -103 -110 -102 0 -426 0 -426 110 -103 110 -103 0 -267 0 -267 -64 -52 -65 -53 -78 0 -78 0 -162 -161 -162 -160 -7 -90 -7 -89 315 0 315 0 232 236 231 235 0 1337 0 1337 -233 233 -232 232 -313 0 -314 0 7 -87z" />
-      </g>
       <g transform="translate(0.000000,361.000000) scale(0.100000,-0.100000)" fill="#2B00A6" stroke="none">
         <path d="M1127 2733 l-77 -78 0 -925 0 -925 78 -78 77 -77 75 0 c41 0 119 3 173 7 l97 6 -2 1071 -3 1071 -170 3 -170 2 -78 -77z" />
         <path d="M2337 2653 c-79 -87 -242 -266 -361 -398 l-216 -240 2 -110 3 -110 235 -3 235 -2 95 107 c52 59 232 260 400 447 392 436 400 445 400 457 l0 9 -324 0 -325 0 -144 -157z" />
@@ -14,7 +10,7 @@
       </g>
     </g>
   </g>
-  <g transform="translate(40 40)" aria-label="eegoid LLC">
+  <g transform="translate(-30 40)" aria-label="eegoid LLC">
     <g transform="translate(0.000000,361.000000) scale(0.100000,-0.100000)" fill="#16151B" stroke="none">
       <path d="M13239 2823 l-109 -107 0 -297 0 -297 75 -113 c41 -63 75 -118 75 -122 0 -5 -16 -31 -35 -57 l-35 -48 0 -239 0 -238 -83 -83 -82 -82 -301 0 -300 0 -57 58 -57 58 0 250 0 250 58 57 58 57 280 0 281 0 46 -40 c25 -22 50 -40 55 -40 17 0 93 93 88 106 -3 7 -62 87 -131 178 l-127 166 -338 0 -338 0 -166 -174 -166 -173 0 -389 1 -389 167 -173 167 -173 492 1 491 0 171 178 171 177 -3 900 -2 900 -119 3 -118 3 -109 -108z" />
       <path d="M11362 2777 l-42 -43 0 -140 0 -140 38 -37 38 -37 130 0 130 0 42 43 42 43 0 137 0 137 -36 40 -36 40 -132 0 -132 0 -42 -43z" />
