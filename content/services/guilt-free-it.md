@@ -1,12 +1,14 @@
 +++
-title = 'Guilt-Free IT for PCs'
-description = 'Remote PC support and service terms from Keegoid LLC.'
+title = 'Guilt-Free IT for Computers'
+description = 'Remote Windows, Mac and Linux computer support and service terms from Keegoid LLC.'
 outputs = ['HTML']
 +++
 
-**$30 per month, per PC.** Keegoid LLC provides remote help with everyday PC issues, questions, and routine maintenance. Covered support has no hourly fee.
+**$30 per month, per computer.** Keegoid LLC provides remote help with everyday Windows, Mac and Linux computer issues, questions, and routine maintenance. Covered support has no hourly fee.
 
-We do not provide on-site visits, physical repairs, or Apple support. Other work requires a separate quote and your approval.
+Typical support hours: Monday–Friday, 8 a.m.–8 p.m. Pacific Time.
+
+We do not provide on-site visits or physical repairs. Other work requires a separate quote and your approval.
 
 Cancel anytime. We refund unused prepaid time proportionally. We may pause support while payment is overdue.
 
