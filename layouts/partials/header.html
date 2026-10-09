@@ -2,7 +2,7 @@
   <div class="page">
     <a class="masthead-lockup" href="{{ .Site.BaseURL }}" aria-label="Keegoid home">
       {{ if .IsHome }}<h1 class="masthead-title">{{ else }}<p class="masthead-title">{{ end }}
-        <img class="masthead-logo" src="{{ "images/brand/keegoid-logo.svg" | relURL }}" width="1706" height="441" alt="Keegoid LLC">
+        <img class="masthead-logo" src="{{ "images/brand/keegoid-logo.svg" | relURL }}?v={{ readFile "static/images/brand/keegoid-logo.svg" | sha256 | truncate 12 "" }}" width="1491" height="321" alt="Keegoid LLC">
       {{ if .IsHome }}</h1>{{ else }}</p>{{ end }}
     </a>
     {{ if .IsHome }}<p class="masthead-tagline">{{ .Site.Params.description }}</p>{{ end }}
