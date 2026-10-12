@@ -80,6 +80,7 @@ If you'd like to run the site locally or explore the code, follow these steps:
 See [LICENSING.md](./LICENSING.md) and the [public licensing page](https://keegoid.com/terms/licensing/) for scope and effective date. The public page renders the same source document.
 
 Content pages must declare `content_license` in front matter: `cc-by-nc-nd-4.0` for retained CC pages, or `reserved` for a new original business work. The footer rejects missing/unknown values to prevent accidental blanket grants. Do not relabel an old CC page or its old material as exclusively reserved. Use a separate, clearly marked new work when reserving new business content.
+
 ---
 
 **Note**: This repository is intended as a template for building your own site. Please replace the content with your own.

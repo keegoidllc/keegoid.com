@@ -10,17 +10,17 @@ Keegoid's public content already offered under [CC BY-NC-ND 4.0](https://creativ
 
 The immediately preceding published website is recorded by commit [fec67e1140cf7d3443320c1ec818bf50f98ee8d1](https://github.com/keegoidllc/keegoid.com/tree/fec67e1140cf7d3443320c1ec818bf50f98ee8d1). Its existing public pages retain CC BY-NC-ND permissions:
 
-- [Home and its existing Notes](/), including the Syntax Highlighting Test.
-- [Services overview](/services/).
-- [Personal AI session](/services/personal-ai-session/).
-- [Business AI assessment](/services/business-ai-assessment/).
-- [AI implementation](/services/ai-implementation/).
-- [Guilt-Free IT for Computers](/services/guilt-free-it/).
-- [Agent Failure Test Pack release page](/services/agent-failure-test-pack/).
-- [Scope & terms overview](/terms/).
-- [AI consulting scope and payment](/terms/ai-consulting/).
-- [Guilt-Free IT terms and Level disclosure](/terms/guilt-free-it/).
-- [Agent Failure Test Pack release status](/terms/agent-failure-test-pack/).
+- [Home and its existing Notes](https://keegoid.com/), including the Syntax Highlighting Test.
+- [Services overview](https://keegoid.com/services/).
+- [Personal AI session](https://keegoid.com/services/personal-ai-session/).
+- [Business AI assessment](https://keegoid.com/services/business-ai-assessment/).
+- [AI implementation](https://keegoid.com/services/ai-implementation/).
+- [Guilt-Free IT for Computers](https://keegoid.com/services/guilt-free-it/).
+- [Agent Failure Test Pack release page](https://keegoid.com/services/agent-failure-test-pack/).
+- [Scope & terms overview](https://keegoid.com/terms/).
+- [AI consulting scope and payment](https://keegoid.com/terms/ai-consulting/).
+- [Guilt-Free IT terms and Level disclosure](https://keegoid.com/terms/guilt-free-it/).
+- [Agent Failure Test Pack release status](https://keegoid.com/terms/agent-failure-test-pack/).
 
 This list does not cancel permissions for older public content no longer shown on the site or for original Keegoid artwork already offered under CC. Existing CC material does not become exclusively reserved when it is reused in a new page, edition, or paid material. Statutory exceptions and material outside copyright are unaffected.
 
