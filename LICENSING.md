@@ -14,7 +14,7 @@ The original [CC BY-NC-ND 4.0 license text](https://github.com/keegoidllc/keegoi
 
 ## Current offers and metadata
 
-Page metadata (`content_offer = "reserved"`) records the current offer, not whether historical rights exist. Rights in new original business content are reserved where Keegoid holds them, unless separately licensed. Any valid earlier permissions continue to apply to previously licensed material, including when it is combined with new material. Current reservation is subject to those permissions and is not an exclusive reservation of previously licensed material.
+Page metadata records the current offer, not whether historical rights exist. `content_offer = "reserved"` identifies current business offers subject to earlier permissions; `content_offer = "historical-only"` identifies the homepage and unchanged older personal post, which make no new license offer and retain any valid earlier permissions. Rights in new original business content are reserved where Keegoid holds them, unless separately licensed. Any valid earlier permissions continue to apply to previously licensed material, including when it is combined with new material. Current reservation is subject to those permissions and is not an exclusive reservation of previously licensed material.
 
 ## Paid materials and client deliverables
 

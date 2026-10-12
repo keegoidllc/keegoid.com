@@ -1,5 +1,5 @@
 +++
-content_offer = "reserved"
+content_offer = "historical-only"
 title = 'Keegoid'
 +++
 
