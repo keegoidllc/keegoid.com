@@ -1,0 +1,6 @@
+{{ define "main" }}
+<main class="page blog-home" id="main-content" tabindex="-1">
+  {{ partial "blog-post.html" (dict "page" . "level" 1 "pinned" false) }}
+  <p><a href="{{ "/#notes" | relURL }}">← Back to the blog</a></p>
+</main>
+{{ end }}

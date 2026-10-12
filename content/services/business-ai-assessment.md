@@ -1,5 +1,6 @@
 +++
 content_offer = "reserved"
+landscape_art = true
 outputs = ["HTML"]
 title = "Business AI assessment"
 weight = 20
@@ -40,3 +41,5 @@ You can see potential in AI but need to choose where to begin. Perhaps a repeate
 Start with the work you would like to improve and the constraints that matter to your business. The assessment gives that discussion a focused format and a written next step.
 
 Custom build work is [individually scoped as an implementation](/services/ai-implementation/). The assessment is a separate service.
+
+{{< practical-experience >}}

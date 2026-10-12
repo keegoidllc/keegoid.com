@@ -84,3 +84,11 @@ The [public summary](https://keegoid.com/terms/licensing/) is brief. [LICENSING.
 ---
 
 **Note**: This repository is intended as a template for building your own site. Please replace the content with your own.
+
+## Blog publishing
+
+The homepage pins the introductory post, then shows editorial posts newest first with pagination. The syntax-highlighting specimen remains in source with `demo = true`; demo posts are excluded before pagination. Technical subject matter alone never excludes a post. Keep one introductory post marked `pinned = true`; additional pinned posts remain in the dated feed rather than disappearing. use `draft = true` for unpublished writing. Give each new editorial post a permanent HTML route with `outputs = ["HTML"]`, and keep its title and slug stable. Share that permalink: fragment links in a paginated article index point into the current list and can move as new posts are added. There were no existing genuine editorial posts in this checkout; the excluded formatting specimen remains in source. Start body headings at `##`; the feed renderer adjusts their level beneath each article title. Set explicit `content_offer` according to the licensing policy.
+
+The Red Rising affiliate destination and existing tag are recorded in `data/affiliate_links.toml`. The tag was verified from the prior site's short-link redirect; no Amazon account settings changed. A disclosure appears near the beginning of the post and the footnote labels the Amazon link “paid link.” Qualifying purchases may earn commission; clicks alone do not. [Amazon's official disclosure guidance](https://affiliate-program.amazon.com/help/node/topic/GHQNZAU6669EZS98) and [Operating Agreement](https://affiliate-program.amazon.com/help/operating/agreement) provide the source requirements. Add the `amazon-disclosure` shortcode whenever using the `amazon-book` shortcode.
+
+The colored-pencil landscape is an original generated asset in `assets/images/colored-pencil-landscape.png`. Hugo serves responsive WebP derivatives; the source PNG is not loaded by the browser. Selected AI service pages use the same accent without changing their approved copy or checkout links.

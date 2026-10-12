@@ -1,5 +1,6 @@
 +++
 content_offer = "reserved"
+landscape_art = true
 outputs = ["HTML"]
 title = "AI implementation"
 weight = 30
@@ -38,3 +39,5 @@ Get in touch with the workflow you have in mind. The first step is a conversatio
 ## Payment structure
 
 Payment is **50% deposit and 50% at acceptance**. The [scope and payment section](/terms/ai-consulting/#ai-implementation) summarizes this structure.
+
+{{< practical-experience >}}

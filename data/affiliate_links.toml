@@ -1,0 +1,12 @@
+# Existing tag recovered from the historic amzn.to/3zzFf9j site link.
+# Source commit: 16504b3432d99a4acfa15b189f7586a17d7947f4.
+# Redirect and signed-in tracking-ID list verified October 12, 2026.
+# Existing keegoid-20 tracking ID confirmed; no account settings changed.
+[amazon]
+tag = "keegoid-20"
+
+# Publisher retailer link: https://sites.prh.com/red-rising-saga
+# Paperback product 034553980X; publisher ISBN 9780345539809.
+[amazon.books.red_rising]
+title = "Red Rising by Pierce Brown"
+asin = "034553980X"
