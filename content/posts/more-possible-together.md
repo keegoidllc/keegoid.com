@@ -21,6 +21,8 @@ Part of that dream grew out of reading *Red Rising*.[^red-rising] The idea of in
 
 Keegoid's [personal AI sessions](/services/personal-ai-session/) and [business assessments](/services/business-ai-assessment/) are practical ways to explore that partnership. For a defined project, [scoped implementations](/services/ai-implementation/) offer a next step. [Guilt-Free IT](/services/guilt-free-it/) helps with the everyday computer questions that can get in the way.
 
+{{< practical-experience >}}
+
 Below, I'll share ideas I find fascinating, things I'm exploring, and lessons that may be useful in your own work. You don't need to be an AI expert to join in.
 
 [^red-rising]: {{< amazon-book "red_rising" >}} — the first book in the series.

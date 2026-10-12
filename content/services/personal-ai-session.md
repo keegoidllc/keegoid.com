@@ -41,3 +41,5 @@ You are curious about AI but want help connecting it to something concrete. You 
 Think of a task you repeat or a project you would like help moving forward. Share that goal when you get in touch, and use it as the starting point for the session.
 
 If the goal is a business workflow or a custom implementation, explore the [business AI assessment](/services/business-ai-assessment/) or [AI implementation](/services/ai-implementation/).
+
+{{< practical-experience >}}
