@@ -4,7 +4,7 @@
   <div class="page">
     <p>© {{ now.Year }} <a href="{{ "/" | relURL }}">Keegoid LLC</a>.</p>
     <nav class="footer-nav" aria-label="Footer navigation"><a href="{{ "/services/" | relURL }}">Services</a><a href="{{ "/terms/" | relURL }}">Scope & terms</a><a href="mailto:support@keegoid.com">support@keegoid.com</a></nav>
-    <p>Code: <a href="https://github.com/keegoidllc/keegoid.com/blob/main/LICENSE">MIT License</a> · Page content: {{ if eq $license "cc-by-nc-nd-4.0" }}<span xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/" about="{{ .Permalink }}"><a property="dct:title" rel="cc:attributionURL" href="{{ "/" | relURL }}">Keegoid</a> © 2024 · <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" rel="license">CC BY-NC-ND 4.0</a></span>{{ else }}rights reserved{{ end }} · <a href="{{ "/terms/licensing/" | relURL }}">Licensing details</a></p>
+    <p>Code: <a href="https://github.com/keegoidllc/keegoid.com/blob/main/LICENSE">MIT License</a> · Page content: {{ if eq $license "cc-by-nc-nd-4.0" }}<span xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/" about="{{ .Permalink }}"><a property="cc:attributionName" rel="cc:attributionURL" href="{{ "/" | relURL }}">Keegoid</a> © 2024 · <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" rel="license">CC BY-NC-ND 4.0</a></span>{{ else }}rights reserved{{ end }} · <a href="{{ "/terms/licensing/" | relURL }}">Licensing details</a></p>
     <p><a href="https://github.com/keegoidllc/keegoid.com/">Source on GitHub</a></p>
   </div>
 </footer>
