@@ -1,5 +1,5 @@
 +++
-content_license = "cc-by-nc-nd-4.0"
+content_offer = "reserved"
 title = "AI consulting scope & payment"
 description = "Included scope and payment structure for Keegoid LLC AI consulting."
 outputs = ["HTML"]

@@ -1,5 +1,5 @@
 +++
-content_license = "cc-by-nc-nd-4.0"
+content_offer = "reserved"
 title = "Guilt-Free IT terms"
 description = "Existing scope and terms for Guilt-Free IT for Computers from Keegoid LLC."
 outputs = ["HTML"]

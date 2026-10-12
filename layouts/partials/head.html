@@ -5,6 +5,7 @@
   <meta name="color-scheme" content="light">
   <meta name="theme-color" content="#FFFFFF">
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+
   {{ if .Params.private }}<meta name="robots" content="noindex, nofollow, noarchive">{{ end }}
 
   <!-- Open Graph Meta Tags -->
