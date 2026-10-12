@@ -5,7 +5,7 @@ description = "Existing scope and terms for Guilt-Free IT for Computers from Kee
 outputs = ["HTML"]
 +++
 
-**$30 for personal use or $50 for business use, USD per computer per month.** Keegoid LLC provides remote help with everyday Windows, Mac and Linux computer issues, questions, and routine maintenance. Covered support has no hourly fee.
+**$30 for personal use or $50 for business use, USD per computer per month, plus applicable sales tax.** Keegoid LLC provides remote help with everyday Windows, Mac and Linux computer issues, questions, and routine maintenance. Covered support has no hourly fee.
 
 Typical support hours: Monday–Friday, 8 a.m.–8 p.m. Pacific Time.
 

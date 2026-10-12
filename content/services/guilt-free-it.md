@@ -7,10 +7,10 @@ eyebrow = "For the computer you rely on"
 headline = "Ask for computer help without watching the clock."
 intro = "Get remote help with everyday Windows, Mac and Linux computer issues, questions, and routine maintenance. Covered support has no hourly fee, so a small question does not have to become a bigger frustration."
 price = "Personal use $30 / Business use $50"
-price_detail = "USD / month / computer"
+price_detail = "USD / month / computer + applicable sales tax"
 format = "Remote computer support + routine maintenance"
 summary = "Everyday remote computer help and routine maintenance. Covered support has no hourly fee."
-description = "Remote computer support for $30 USD per computer per month for personal use or $50 for business use. Covered support has no hourly fee."
+description = "Remote computer support for $30 USD per computer per month for personal use or $50 for business use, plus applicable sales tax. Covered support has no hourly fee."
 cta_label = "Contact me"
 cta_subject = "Get started: Guilt-Free IT for Computers"
 cta_note = "Email Keegoid to arrange personal or business computer support."
@@ -29,7 +29,7 @@ title = "Get remote support"
 text = "Receive help with everyday computer issues without an on-site visit. Remote access requires your permission."
 [[benefits]]
 title = "Know the monthly price"
-text = "$30 for personal use or $50 for business use, USD per computer per month. Covered support has no hourly fee."
+text = "$30 for personal use or $50 for business use, USD per computer per month, plus applicable sales tax. Covered support has no hourly fee."
 +++
 
 ## Everyday help, clear monthly pricing
