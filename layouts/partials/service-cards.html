@@ -4,7 +4,8 @@
     <p class="eyebrow">{{ .Params.eyebrow }}</p>
     <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
     <p class="card-summary">{{ .Params.summary }}</p>
-    <p class="card-price">{{ .Params.price }} <span>{{ .Params.price_detail }}</span></p>
+    <p class="card-price">{{ .Params.price }} {{ with .Params.price_detail }}<span>{{ . }}</span>{{ end }}</p>
+    {{ if .Params.inquiry_only }}<p class="card-summary">{{ .Params.format }}</p>{{ end }}
     <a class="card-link" href="{{ .RelPermalink }}">Explore {{ .Title }} <span aria-hidden="true">→</span></a>
   </article>
 {{ end }}
