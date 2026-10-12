@@ -1,4 +1,9 @@
 {{ $amazon := hugo.Data.affiliate_links.amazon }}
 {{ $book := index $amazon.books (.Get 0) }}
-{{ if or (not $amazon.tag) (not $book.asin) }}{{ errorf "Amazon book link requires a verified tag and book destination on %s" .Page.File.Path }}{{ end }}
-<a href="{{ printf "https://www.amazon.com/gp/product/%s?tag=%s" $book.asin ($amazon.tag | urlquery) }}" rel="sponsored">{{ $book.title }} on Amazon (paid link)</a>
+{{ if not $book }}
+  {{ errorf "Unknown Amazon book key %q on %s" (.Get 0) .Page.File.Path }}
+{{ else if or (not $amazon.tag) (not $book.asin) }}
+  {{ errorf "Amazon book link requires a verified tag and book destination on %s" .Page.File.Path }}
+{{ else }}
+  <a href="{{ printf "https://www.amazon.com/gp/product/%s?tag=%s" $book.asin ($amazon.tag | urlquery) }}" rel="sponsored">{{ $book.title }} on Amazon (paid link)</a>
+{{ end }}

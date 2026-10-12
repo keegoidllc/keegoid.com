@@ -1,6 +1,7 @@
 # Existing tag recovered from the historic amzn.to/3zzFf9j site link.
 # Source commit: 16504b3432d99a4acfa15b189f7586a17d7947f4.
-# Redirect verified October 12, 2026; no account settings changed.
+# Redirect and signed-in tracking-ID list verified October 12, 2026.
+# Existing keegoid-20 tracking ID confirmed; no account settings changed.
 [amazon]
 tag = "keegoid-20"
 

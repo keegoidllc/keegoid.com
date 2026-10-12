@@ -1,10 +1,8 @@
-{{- /* Posts render only inline on the homepage under an <h2> post title,
-     so demote their headings one level and namespace their ids by post
-     slug to keep the single-page outline nested and ids unique. */ -}}
+{{- /* Namespace post heading IDs. The blog renderer adjusts heading levels
+     for a paginated feed; standalone post bodies keep their Markdown levels. */ -}}
 {{- $level := .Level -}}
 {{- $anchor := .Anchor -}}
 {{- if eq .Page.Section "posts" -}}
-  {{- if lt $level 6 }}{{ $level = add $level 1 }}{{ end -}}
   {{- $anchor = printf "%s-%s" .Page.File.TranslationBaseName .Anchor -}}
 {{- end -}}
 <h{{ $level }} id="{{ $anchor | safeURL }}">{{ .Text }}</h{{ $level }}>

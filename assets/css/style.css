@@ -268,8 +268,8 @@ a:focus-visible {
   background: var(--accent);
 }
 
-/* Body typography. Content headings are demoted one level by the render
-   hook on the homepage (## -> h3); standalone pages keep h2. */
+/* Body typography. The blog feed nests body headings beneath article
+   titles; standalone pages retain their Markdown heading levels. */
 .post-content h2,
 .post-content h3,
 .post-content h4,
@@ -630,3 +630,7 @@ code {
 .landscape-art img { display:block; width:100%; height:auto; aspect-ratio:2.4/1; object-fit:cover; }
 .service-copy+.landscape-art { max-width:46rem; margin:3rem 0; }
 @media(max-width:480px) { .landscape-art img { aspect-ratio:1.8/1; } .pinned-post .eyebrow { font-size:.7rem; } }
+
+.notes-section .post-content h4 { font-size:1.625rem; }
+.notes-section .post-content h5 { font-size:1.25rem; }
+.notes-section .post-content h6 { font-family:var(--font-display); font-size:1.0625rem; font-weight:620; line-height:1.2; }

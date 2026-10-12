@@ -4,8 +4,12 @@
   {{ if .pinned }}<p class="eyebrow">Pinned introduction · Keegan's blog</p>{{ end }}
   {{ if eq .level 1 }}<h1 class="post-title">{{ $post.Title }}</h1>{{ else }}<h3 class="post-title">{{ $post.Title }}</h3>{{ end }}
   <div class="post-dates">Published <time datetime="{{ $post.Date.Format "2006-01-02" }}">{{ $post.Date.Format "January 2, 2006" }}</time>{{ if gt $post.Lastmod $post.Date }} · Updated {{ $post.Lastmod.Format "January 2, 2006" }}{{ end }}{{ with $post.OutputFormats.Get "HTML" }} · <a href="{{ .RelPermalink }}">Permalink</a>{{ end }}</div>
+  {{ $body := $post.Content }}
+  {{ if eq .level 3 }}
+    {{ $body = $body | replaceRE `<(/?)h[456](\b[^>]*)>` `<${1}h6${2}>` | replaceRE `<(/?)h3(\b[^>]*)>` `<${1}h5${2}>` | replaceRE `<(/?)h[12](\b[^>]*)>` `<${1}h4${2}>` }}
+  {{ end }}
   <div class="post-content">
-    {{ $post.Content
+    {{ $body
        | replaceRE `id="fn:` (printf `id="%s-fn:` $slug)
        | replaceRE `id="fnref:` (printf `id="%s-fnref:` $slug)
        | replaceRE `href="#fn:` (printf `href="#%s-fn:` $slug)

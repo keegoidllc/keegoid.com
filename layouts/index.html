@@ -1,12 +1,14 @@
 {{ define "main" }}
 <main class="page blog-home" id="main-content" tabindex="-1">
   {{ $posts := (where (where .Site.RegularPages "Section" "posts") "Params.demo" "ne" true).ByDate.Reverse }}
-  {{ range first 1 (where $posts "Params.pinned" true) }}
+  {{ $selectedPin := first 1 (where $posts "Params.pinned" true) }}
+  {{ if not $selectedPin }}<h1>Keegan’s blog</h1>{{ end }}
+  {{ range $selectedPin }}
     {{ partial "blog-post.html" (dict "page" . "level" 1 "pinned" true) }}
   {{ end }}
   <section id="notes" class="notes-section" aria-labelledby="notes-heading">
     <h2 id="notes-heading">Latest notes</h2>
-    {{ $feed := where $posts "Params.pinned" "ne" true }}
+    {{ $feed := complement $selectedPin $posts }}
     {{ $paginator := .Paginate $feed }}
     {{ with $paginator.Pages }}
       <nav class="contents" aria-label="Article index"><ol>
@@ -17,7 +19,7 @@
         {{ partial "blog-post.html" (dict "page" $post "level" 3 "pinned" false) }}
       {{ end }}
     {{ else }}
-      <p class="feed-empty">I'm starting with the introduction above. New notes will appear here as I publish them.</p>
+      <p class="feed-empty">{{ if $selectedPin }}I'm starting with the introduction above. {{ end }}New notes will appear here as I publish them.</p>
     {{ end }}
     {{ if gt $paginator.TotalPages 1 }}<nav class="blog-pagination" aria-label="More notes">
       {{ with $paginator.Prev }}<a href="{{ .URL }}">← Newer notes</a>{{ end }}
