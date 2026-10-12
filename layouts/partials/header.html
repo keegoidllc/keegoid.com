@@ -1,10 +1,14 @@
-<header class="masthead{{ if not .IsHome }} masthead--compact{{ end }} rise">
-  <div class="page">
-    <a class="masthead-lockup" href="{{ .Site.BaseURL }}" aria-label="Keegoid home">
-      {{ if .IsHome }}<h1 class="masthead-title">{{ else }}<p class="masthead-title">{{ end }}
-        <img class="masthead-logo" src="{{ "images/brand/keegoid-logo.svg" | relURL }}?v={{ readFile "static/images/brand/keegoid-logo.svg" | sha256 | truncate 12 "" }}" width="1491" height="321" alt="Keegoid LLC">
-      {{ if .IsHome }}</h1>{{ else }}</p>{{ end }}
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="masthead masthead--compact">
+  <div class="page header-row">
+    <a class="masthead-lockup" href="{{ "/" | relURL }}" aria-label="Keegoid home">
+      <p class="masthead-title"><img class="masthead-logo" src="{{ "images/brand/keegoid-logo.svg" | relURL }}?v={{ readFile "static/images/brand/keegoid-logo.svg" | sha256 | truncate 12 "" }}" width="1491" height="321" alt="Keegoid LLC"></p>
     </a>
-    {{ if .IsHome }}<p class="masthead-tagline">{{ .Site.Params.description }}</p>{{ end }}
+    <nav class="primary-nav" aria-label="Main navigation">
+      <a href="{{ "/" | relURL }}"{{ if .IsHome }} aria-current="page"{{ end }}>Home</a>
+      <a href="{{ "/services/" | relURL }}"{{ if eq .Section "services" }} aria-current="{{ if .IsSection }}page{{ else }}true{{ end }}"{{ end }}>Services</a>
+      <a href="{{ "/#notes" | relURL }}">Notes</a>
+      <a href="{{ "/terms/" | relURL }}"{{ if eq .Section "terms" }} aria-current="{{ if .IsSection }}page{{ else }}true{{ end }}"{{ end }}>Scope & terms</a>
+    </nav>
   </div>
 </header>

@@ -1,0 +1,14 @@
+{{ $entry := index hugo.Data.service_links .File.TranslationBaseName }}
+{{ $subject := replace (.Params.cta_subject | urlquery) "+" "%20" }}
+{{ $url := printf "mailto:support@keegoid.com?subject=%s" $subject }}
+{{ $note := .Params.cta_note }}
+{{ if and $entry $entry.url }}
+  {{ if not (findRE `^https://buy\.stripe\.com/[A-Za-z0-9]+$` $entry.url) }}{{ errorf "Invalid Stripe checkout URL for %s" .File.TranslationBaseName }}{{ end }}
+  {{ $url = $entry.url }}
+  {{ $note = "Continue to Stripe to prepay for this service. After payment, contact support@keegoid.com for next steps." }}
+{{ end }}
+<div class="get-started">
+  <a class="button" href="{{ $url | safeURL }}">{{ .Params.cta_label | default "Get started" }} <span aria-hidden="true">↗</span></a>
+  <p class="cta-note">{{ $note }}</p>
+  <a class="terms-link" href="{{ .Params.terms_url | relURL }}">Read scope & terms</a>
+</div>

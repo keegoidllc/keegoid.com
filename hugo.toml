@@ -6,7 +6,7 @@ enableGitInfo = true
 
 [params]
   mainSections = ["posts"]
-  description = "LLAP | Longevity hacks, gadget love, and appreciation of nature"
+  description = "Practical AI consulting, everyday remote computer support, and developer testing materials from Keegoid LLC."
   defaultImage = "https://keegoid.com/images/brand/keegoid-og-card.png"
 
 [markup]

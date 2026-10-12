@@ -1,5 +1,16 @@
 {{ define "main" }}
-  <main class="page">
+  <main class="page" id="main-content" tabindex="-1">
+    <section class="home-hero" aria-labelledby="home-title">
+      <p class="eyebrow">Keegoid LLC · practical help with technology</p>
+      <h1 id="home-title">Practical AI.<br>Everyday IT.</h1>
+      <p class="hero-intro">Find a useful way to work with AI, put a defined idea into practice, or get help with the computer you rely on.</p>
+      <a class="button" href="{{ "/services/" | relURL }}">Find your starting point <span aria-hidden="true">↗</span></a>
+    </section>
+    <section class="service-overview" aria-labelledby="services-heading">
+      <div class="section-heading"><h2 id="services-heading">A clear place to start.</h2><a href="{{ "/services/" | relURL }}">All services <span aria-hidden="true">→</span></a></div>
+      {{ partial "service-cards.html" . }}
+    </section>
+    <section id="notes" class="notes-section" aria-labelledby="notes-heading"><h2 id="notes-heading">Notes</h2>
     {{ $posts := (where .Site.RegularPages "Section" "posts").ByDate.Reverse }}
 
     <!-- Contents — leader-dot index -->
@@ -45,5 +56,6 @@
         {{ end }}
       </article>
     {{ end }}
+    </section>
   </main>
 {{ end }}
