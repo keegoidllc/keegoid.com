@@ -1,5 +1,5 @@
 +++
-content_license = "cc-by-nc-nd-4.0"
+content_offer = "reserved"
 outputs = ["HTML"]
 title = "Agent Failure Test Pack"
 weight = 50

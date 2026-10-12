@@ -1,5 +1,5 @@
-{{ $license := .Params.content_license }}
-{{ if not (in (slice "cc-by-nc-nd-4.0" "reserved") $license) }}{{ errorf "Set an explicit content_license for %s" .RelPermalink }}{{ end }}
+{{ $offer := .Params.content_offer }}
+{{ if not (in (slice "cc-by-nc-nd-4.0" "reserved") $offer) }}{{ errorf "Set an explicit content_offer for %s" .RelPermalink }}{{ end }}
 <footer class="site-footer">
   <div class="page">
     <p>© {{ now.Year }} <a href="{{ "/" | relURL }}">Keegoid LLC</a>.</p>

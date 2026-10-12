@@ -1,5 +1,5 @@
 +++
-content_license = "cc-by-nc-nd-4.0"
+content_offer = "reserved"
 title = "Agent Failure Test Pack release status"
 description = "Approved price and current release status for the Agent Failure Test Pack."
 outputs = ["HTML"]

@@ -71,16 +71,15 @@ If you'd like to run the site locally or explore the code, follow these steps:
 
 ## License
 
-- **Website code and associated software documentation**: [MIT](./LICENSE); the existing copyright and permission notice is unchanged.
-- **Previously published public content**: the existing Keegoid © 2024 attribution and [CC BY-NC-ND 4.0](./CONTENT_LICENSE) grants continue, including the pages published in baseline commit `fec67e1140cf7d3443320c1ec818bf50f98ee8d1` and earlier licensed versions.
-- **New original business content**: rights reserved prospectively from the first publication of the October 12, 2026 policy, unless separately licensed. Existing licensed material retains its permissions wherever reused.
-- **Paid materials/client deliverables**: their actual agreed terms govern where defined; the website footer does not create customer-use terms.
+- **Website code and associated software documentation**: [MIT](./LICENSE); its copyright and permission notice remain unchanged.
+- **Current service descriptions and new original business content**: offered with rights reserved from the first publication of the clarified October 12, 2026 notice, where Keegoid holds copyright, unless separately licensed. Current pages make no new CC offer.
+- **Historical permissions**: any permissions validly granted under earlier MIT/CC licenses remain unaffected. The Keegoid © 2024 attribution and [CC BY-NC-ND 4.0 text](./CONTENT_LICENSE) remain available as part of that record; this is not a new blanket CC offer. Previously licensed material does not become exclusively reserved when reused.
+- **Paid/client materials**: actual agreed terms govern where defined; the footer does not create customer-use terms.
 - **Third-party material**: retains its own licenses and notices.
 
-See [LICENSING.md](./LICENSING.md) and the [public licensing page](https://keegoid.com/terms/licensing/) for scope and effective date. The public page provides a short summary; LICENSING.md retains the detailed legacy scope and notices.
+The [public summary](https://keegoid.com/terms/licensing/) is brief. [LICENSING.md](./LICENSING.md) retains scope and history, including the earlier published snapshots.
 
-Content pages must declare `content_license` in front matter: `cc-by-nc-nd-4.0` for retained CC pages, or `reserved` for a new original business work. The footer rejects missing/unknown values to prevent accidental blanket grants. Do not relabel an old CC page or its old material as exclusively reserved. Use a separate, clearly marked new work when reserving new business content.
-
+`content_offer` describes the current offer, not historical licensing status. Current content pages use `reserved`; missing/unknown values fail the build rather than silently granting permission. This metadata never withdraws earlier valid grants.
 ---
 
 **Note**: This repository is intended as a template for building your own site. Please replace the content with your own.

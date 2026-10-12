@@ -1,5 +1,5 @@
 +++
-content_license = "cc-by-nc-nd-4.0"
+content_offer = "reserved"
 title = "Scope & terms"
 description = "Service scope, prices, and terms for Keegoid LLC services."
 outputs = ["HTML"]
