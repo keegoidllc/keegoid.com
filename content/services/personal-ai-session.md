@@ -1,4 +1,5 @@
 +++
+content_license = "cc-by-nc-nd-4.0"
 outputs = ["HTML"]
 title = "Personal AI session"
 weight = 10
