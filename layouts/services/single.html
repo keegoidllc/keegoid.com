@@ -7,7 +7,7 @@
   <article>
     <header class="service-hero">
       <div><p class="eyebrow">{{ .Params.eyebrow }}</p><p class="service-name">{{ .Title }}</p><h1>{{ .Params.headline }}</h1><p class="hero-intro">{{ .Params.intro }}</p></div>
-      <aside class="price-panel" aria-label="Price and getting started"><p class="price">{{ .Params.price }}</p><p class="price-detail">{{ .Params.price_detail }}</p><p class="service-format">{{ .Params.format }}</p>{{ partial "service-cta.html" . }}</aside>
+      <aside class="price-panel" aria-label="Price and getting started">{{ partial "service-price.html" (dict "page" . "variant" "panel") }}<p class="service-format">{{ .Params.format }}</p>{{ partial "service-cta.html" . }}</aside>
     </header>
     <section class="benefit-grid" aria-label="Why choose this service">{{ range .Params.benefits }}<div><h2>{{ .title }}</h2><p>{{ .text }}</p></div>{{ end }}</section>
     <div class="post-content service-copy">{{ .Content }}</div>

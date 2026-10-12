@@ -1,0 +1,10 @@
+{{ $page := .page }}
+{{ $panel := eq .variant "panel" }}
+{{ with $page.Params.price_tiers }}
+  <div class="tier-price-block{{ if $panel }} tier-price-block--panel{{ end }}">
+    <dl class="service-price-tiers">{{ range . }}<div><dt>{{ .label }}</dt><dd>{{ .amount }}</dd></div>{{ end }}</dl>
+    <p class="price-detail">{{ $page.Params.price_detail }}</p>
+  </div>
+{{ else }}
+  {{ if $panel }}<p class="price">{{ $page.Params.price }}</p><p class="price-detail">{{ $page.Params.price_detail }}</p>{{ else }}<p class="card-price">{{ $page.Params.price }} {{ with $page.Params.price_detail }}<span>{{ . }}</span>{{ end }}</p>{{ end }}
+{{ end }}
