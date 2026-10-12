@@ -80,6 +80,7 @@ If you'd like to run the site locally or explore the code, follow these steps:
 The [public summary](https://keegoid.com/terms/licensing/) is brief. [LICENSING.md](./LICENSING.md) retains scope and history, including the earlier published snapshots.
 
 `content_offer` describes the current offer, not historical licensing status. Current content pages use `reserved`; missing/unknown values fail the build rather than silently granting permission. This metadata never withdraws earlier valid grants.
+
 ---
 
 **Note**: This repository is intended as a template for building your own site. Please replace the content with your own.
