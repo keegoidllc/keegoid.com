@@ -2,7 +2,7 @@
 {{ $slug := $post.File.TranslationBaseName }}
 <article class="post{{ if .pinned }} pinned-post{{ end }}" id="{{ $slug }}">
   {{ if .pinned }}<p class="eyebrow">Pinned introduction · Keegan's blog</p>{{ end }}
-  {{ if eq .level 1 }}<h1 class="post-title">{{ $post.Title }}</h1>{{ else }}<h3 class="post-title">{{ $post.Title }}</h3>{{ end }}
+  {{ if eq .level 1 }}<h1 class="post-title">{{ $post.Title }}</h1>{{ else if eq .level 2 }}<h2 class="post-title">{{ $post.Title }}</h2>{{ else }}<h3 class="post-title">{{ $post.Title }}</h3>{{ end }}
   <div class="post-dates">Published <time datetime="{{ $post.Date.Format "2006-01-02" }}">{{ $post.Date.Format "January 2, 2006" }}</time>{{ if gt $post.Lastmod $post.Date }} · Updated {{ $post.Lastmod.Format "January 2, 2006" }}{{ end }}{{ with $post.OutputFormats.Get "HTML" }} · <a href="{{ .RelPermalink }}">Permalink</a>{{ end }}</div>
   {{ $body := $post.Content }}
   {{ if eq .level 3 }}

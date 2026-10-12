@@ -1,10 +1,14 @@
 {{ define "main" }}
 <main class="page blog-home" id="main-content" tabindex="-1">
+  <h1 class="visually-hidden">Keegoid — personal blog and practical services</h1>
+  <section class="pinned-services" id="home-services" aria-labelledby="home-services-heading">
+    <div class="section-heading"><h2 id="home-services-heading">Services</h2><a href="{{ "/services/" | relURL }}">All services →</a></div>
+    {{ partial "home-service-cards.html" . }}
+  </section>
   {{ $posts := (where (where .Site.RegularPages "Section" "posts") "Params.demo" "ne" true).ByDate.Reverse }}
   {{ $selectedPin := first 1 (where $posts "Params.pinned" true) }}
-  {{ if not $selectedPin }}<h1>Keegan’s blog</h1>{{ end }}
   {{ range $selectedPin }}
-    {{ partial "blog-post.html" (dict "page" . "level" 1 "pinned" true) }}
+    {{ partial "blog-post.html" (dict "page" . "level" 2 "pinned" true) }}
   {{ end }}
   <section id="notes" class="notes-section" aria-labelledby="notes-heading">
     <h2 id="notes-heading">Recent posts</h2>
