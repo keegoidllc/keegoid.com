@@ -5,6 +5,7 @@
     <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
     <p class="card-summary">{{ .Params.summary }}</p>
     <p class="card-price">{{ .Params.price }} <span>{{ .Params.price_detail }}</span></p>
+    {{ if eq .File.TranslationBaseName "agent-failure-test-pack" }}<p class="card-summary">{{ .Params.format }}</p>{{ end }}
     <a class="card-link" href="{{ .RelPermalink }}">Explore {{ .Title }} <span aria-hidden="true">→</span></a>
   </article>
 {{ end }}

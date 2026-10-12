@@ -2,6 +2,6 @@
 <main class="page" id="main-content" tabindex="-1">
   <header class="section-intro"><p class="eyebrow">Keegoid services</p><h1>Choose your starting point.</h1><div class="hero-intro">{{ .Content }}</div></header>
   <section aria-labelledby="available-services"><h2 id="available-services" class="visually-hidden">Available services</h2>{{ partial "service-cards.html" . }}</section>
-  <aside class="help-panel"><h2>Have a goal, but not a service in mind?</h2><p>Tell Keegoid what you would like to work on.</p><a href="mailto:support@keegoid.com?subject=Help%20choosing%20a%20Keegoid%20service">Contact support@keegoid.com <span aria-hidden="true">↗</span></a></aside>
+  {{ partial "service-contact.html" . }}
 </main>
 {{ end }}

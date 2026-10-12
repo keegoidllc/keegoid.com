@@ -1,9 +1,9 @@
 {{ define "main" }}
-<main class="page blog-home" id="main-content" tabindex="-1">
+<main class="page home-with-services" id="main-content" tabindex="-1">
   <h1 class="visually-hidden">Keegoid — personal blog and practical services</h1>
   <section class="pinned-services" id="home-services" aria-labelledby="home-services-heading">
-    <div class="section-heading"><h2 id="home-services-heading">Services</h2><a href="{{ "/services/" | relURL }}">All services →</a></div>
-    {{ partial "home-service-cards.html" . }}
+    <header class="home-services-intro"><p class="eyebrow">Keegoid services</p><h2 id="home-services-heading">Choose your starting point.</h2>{{ with .Site.GetPage "/services" }}<div class="hero-intro">{{ .Content }}</div>{{ end }}</header>
+    {{ partial "service-cards.html" . }}
   </section>
   {{ $posts := (where (where .Site.RegularPages "Section" "posts") "Params.demo" "ne" true).ByDate.Reverse }}
   {{ $selectedPin := first 1 (where $posts "Params.pinned" true) }}
@@ -31,5 +31,6 @@
       {{ with $paginator.Next }}<a href="{{ .URL }}">Older posts →</a>{{ end }}
     </nav>{{ end }}
   </section>
+  {{ partial "service-contact.html" . }}
 </main>
 {{ end }}

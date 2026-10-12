@@ -635,16 +635,11 @@ code {
 .notes-section .post-content h5 { font-size:1.25rem; }
 .notes-section .post-content h6 { font-family:var(--font-display); font-size:1.0625rem; font-weight:620; line-height:1.2; }
 
-/* Compact services stay above the introductory blog post. */
-.pinned-services { margin:0 0 3rem; padding:0 0 2.5rem; border-bottom:1px solid var(--rule); }
-.pinned-services .section-heading { margin-bottom:1rem; }
-.pinned-services .section-heading h2 { font-size:1.4rem; }
-.pinned-services .service-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:.75rem; }
-.pinned-services .service-card { grid-column:auto; padding:1rem; }
-.pinned-services .service-card:last-child { grid-column:1/-1; }
-.pinned-services .service-card h3 { font-size:1.05rem; margin-bottom:.5rem; }
-.pinned-services .card-price { font-size:1rem; margin:0 0 .5rem; }
-.pinned-services .card-price span { font-size:.78rem; }
-.pinned-services .card-summary { font-size:.85rem; margin:0 0 .5rem; }
-.pinned-services .card-link { min-height:32px; display:inline-flex; align-items:center; margin-top:auto; }
-@media(max-width:480px) { .pinned-services .service-grid { grid-template-columns:1fr; } }
+/* The full service overview precedes the narrower blog reading column. */
+.pinned-services { margin:0 0 3rem; padding:0 0 3rem; border-bottom:1px solid var(--rule); }
+.home-services-intro { max-width:48rem; margin-bottom:2rem; }
+.home-services-intro h2 { font-size:clamp(2rem,4.5vw,3rem); line-height:1.1; letter-spacing:-.025em; margin:0 0 1rem; }
+.home-with-services>.pinned-post, .home-with-services>.notes-section { max-width:45rem; margin-left:auto; margin-right:auto; }
+.home-with-services>.notes-section { margin-top:3rem; }
+.home-with-services>.help-panel { margin-top:4rem; }
+.pinned-services .card-link, .home-with-services>.help-panel>a { display:inline-flex; align-items:center; min-height:32px; }
