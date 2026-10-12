@@ -1,5 +1,6 @@
 +++
 content_offer = "reserved"
+inquiry_only = true
 outputs = ["HTML"]
 title = "Agent Failure Test Pack"
 weight = 50
