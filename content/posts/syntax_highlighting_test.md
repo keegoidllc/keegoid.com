@@ -1,4 +1,5 @@
 +++
+content_license = "cc-by-nc-nd-4.0"
 title = 'Syntax Highlighting Test'
 date = 2024-09-28 09:07:25
 background_image = "/images/napkin_drawing.webp"

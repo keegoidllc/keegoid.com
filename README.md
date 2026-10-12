@@ -71,10 +71,15 @@ If you'd like to run the site locally or explore the code, follow these steps:
 
 ## License
 
-This repository contains the source code for my personal website built with Hugo.
+- **Website code and associated software documentation**: [MIT](./LICENSE); the existing copyright and permission notice is unchanged.
+- **Previously published public content**: the existing Keegoid © 2024 attribution and [CC BY-NC-ND 4.0](./CONTENT_LICENSE) grants continue, including the pages published in baseline commit `fec67e1140cf7d3443320c1ec818bf50f98ee8d1` and earlier licensed versions.
+- **New original business content**: rights reserved prospectively from the first publication of the October 12, 2026 policy, unless separately licensed. Existing licensed material retains its permissions wherever reused.
+- **Paid materials/client deliverables**: their actual agreed terms govern where defined; the website footer does not create customer-use terms.
+- **Third-party material**: retains its own licenses and notices.
 
-- **Code**: Licensed under the [MIT License](./LICENSE)
-- **Content**: [Keegoid](https://keegoid.com/) © 2024 is licensed under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1)
+See [LICENSING.md](./LICENSING.md) and the [public licensing page](https://keegoid.com/terms/licensing/) for scope and effective date. The public page renders the same source document.
+
+Content pages must declare `content_license` in front matter: `cc-by-nc-nd-4.0` for retained CC pages, or `reserved` for a new original business work. The footer rejects missing/unknown values to prevent accidental blanket grants. Do not relabel an old CC page or its old material as exclusively reserved. Use a separate, clearly marked new work when reserving new business content.
 
 ---
 
