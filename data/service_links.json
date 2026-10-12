@@ -1,0 +1,27 @@
+{
+  "personal-ai-session": {
+    "url": "https://buy.stripe.com/14A28r3hqaVZ5iGeAl9Zm00",
+    "product_id": "prod_VQbkYKiSq3Ha1s",
+    "price_id": "price_1UPkWcDyALpXcTEqWHJx6PXv"
+  },
+  "business-ai-assessment": {
+    "url": "https://buy.stripe.com/8x23cv7xGc03h1ogIt9Zm01",
+    "product_id": "prod_VQbktkfJEBpmkU",
+    "price_id": "price_1UPkX0DyALpXcTEqb0j3fRQq"
+  },
+  "ai-implementation": {
+    "url": "",
+    "product_id": "prod_VQbkfnPC4lK7QX",
+    "price_id": ""
+  },
+  "guilt-free-it": {
+    "url": "",
+    "product_id": "prod_VFWaA9aTYEGtBv",
+    "price_id": "price_1UF1XjDyALpXcTEqY9iXAhDX"
+  },
+  "agent-failure-test-pack": {
+    "url": "",
+    "product_id": "prod_VIwSVmG5tDsOIX",
+    "price_id": "price_1UIKZDDyALpXcTEqSmvaT4g4"
+  }
+}

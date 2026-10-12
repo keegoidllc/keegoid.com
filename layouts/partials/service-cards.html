@@ -1,0 +1,11 @@
+<div class="service-grid">
+{{ range (where .Site.RegularPages "Section" "services").ByWeight }}
+  <article class="service-card">
+    <p class="eyebrow">{{ .Params.eyebrow }}</p>
+    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+    <p class="card-summary">{{ .Params.summary }}</p>
+    <p class="card-price">{{ .Params.price }} <span>{{ .Params.price_detail }}</span></p>
+    <a class="card-link" href="{{ .RelPermalink }}">Explore {{ .Title }} <span aria-hidden="true">→</span></a>
+  </article>
+{{ end }}
+</div>
