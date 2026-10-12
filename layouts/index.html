@@ -7,7 +7,7 @@
     {{ partial "blog-post.html" (dict "page" . "level" 1 "pinned" true) }}
   {{ end }}
   <section id="notes" class="notes-section" aria-labelledby="notes-heading">
-    <h2 id="notes-heading">Latest notes</h2>
+    <h2 id="notes-heading">Recent posts</h2>
     {{ $feed := complement $selectedPin $posts }}
     {{ $paginator := .Paginate $feed }}
     {{ with $paginator.Pages }}
@@ -19,12 +19,12 @@
         {{ partial "blog-post.html" (dict "page" $post "level" 3 "pinned" false) }}
       {{ end }}
     {{ else }}
-      <p class="feed-empty">{{ if $selectedPin }}I'm starting with the introduction above. {{ end }}New notes will appear here as I publish them.</p>
+      <p class="feed-empty">{{ if $selectedPin }}I'm starting with the introduction above. {{ end }}New posts will appear here as I publish them.</p>
     {{ end }}
-    {{ if gt $paginator.TotalPages 1 }}<nav class="blog-pagination" aria-label="More notes">
-      {{ with $paginator.Prev }}<a href="{{ .URL }}">← Newer notes</a>{{ end }}
+    {{ if gt $paginator.TotalPages 1 }}<nav class="blog-pagination" aria-label="More posts">
+      {{ with $paginator.Prev }}<a href="{{ .URL }}">← Newer posts</a>{{ end }}
       <span>Page {{ $paginator.PageNumber }} of {{ $paginator.TotalPages }}</span>
-      {{ with $paginator.Next }}<a href="{{ .URL }}">Older notes →</a>{{ end }}
+      {{ with $paginator.Next }}<a href="{{ .URL }}">Older posts →</a>{{ end }}
     </nav>{{ end }}
   </section>
 </main>
