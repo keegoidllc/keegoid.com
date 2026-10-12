@@ -5,6 +5,12 @@
   <meta name="color-scheme" content="light">
   <meta name="theme-color" content="#FFFFFF">
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+  {{ if eq .Params.content_license "cc-by-nc-nd-4.0" }}
+  <link rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+  <meta name="copyright" content="Keegoid © 2024">
+  <meta property="cc:attributionName" prefix="cc: http://creativecommons.org/ns#" content="Keegoid">
+  <link rel="cc:attributionURL" prefix="cc: http://creativecommons.org/ns#" href="{{ "/" | absURL }}">
+  {{ end }}
   {{ if .Params.private }}<meta name="robots" content="noindex, nofollow, noarchive">{{ end }}
 
   <!-- Open Graph Meta Tags -->
