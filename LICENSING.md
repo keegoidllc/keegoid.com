@@ -8,7 +8,7 @@ Keegoid's original website software code and its associated software documentati
 
 Keegoid's public content already offered under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/) continues under that license, including earlier published versions. The previously published content attribution remains **Keegoid © 2024**, with [Keegoid](https://keegoid.com/) as the attribution source. Preserve applicable copyright and attribution notices when relying on that license. The complete license text remains in [CONTENT_LICENSE](https://github.com/keegoidllc/keegoid.com/blob/main/CONTENT_LICENSE). [Creative Commons explains why prior grants cannot be revoked](https://creativecommons.org/faq/#what-if-i-change-my-mind-about-using-a-cc-license).
 
-The immediately preceding published website is recorded by commit [fec67e1140cf7d3443320c1ec818bf50f98ee8d1](https://github.com/keegoidllc/keegoid.com/tree/fec67e1140cf7d3443320c1ec818bf50f98ee8d1). Its existing public pages retain CC BY-NC-ND permissions:
+The immediately preceding published website is recorded by commit [fec67e1](https://github.com/keegoidllc/keegoid.com/tree/fec67e1140cf7d3443320c1ec818bf50f98ee8d1). Its existing public pages retain CC BY-NC-ND permissions:
 
 - [Home and its existing Notes](https://keegoid.com/), including the Syntax Highlighting Test.
 - [Services overview](https://keegoid.com/services/).
