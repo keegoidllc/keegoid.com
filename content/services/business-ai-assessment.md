@@ -1,5 +1,6 @@
 +++
 content_offer = "reserved"
+landscape_art = true
 outputs = ["HTML"]
 title = "Business AI assessment"
 weight = 20

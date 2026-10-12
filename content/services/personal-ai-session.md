@@ -1,5 +1,6 @@
 +++
 content_offer = "reserved"
+landscape_art = true
 outputs = ["HTML"]
 title = "Personal AI session"
 weight = 10

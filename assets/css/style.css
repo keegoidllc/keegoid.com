@@ -617,3 +617,16 @@ code {
 .privacy-details summary:focus-visible { outline:2px solid var(--accent); outline-offset:4px; }
 .disclosure-content { margin-top:1rem; }
 .disclosure-content p:last-child { margin-bottom:0; }
+
+/* Blog reading layout and colored-pencil landscape. */
+.blog-home { max-width:48rem; }
+.pinned-post .post-title { font-size:clamp(2.2rem,5.5vw,3.2rem); line-height:1.08; }
+.blog-home .notes-section { margin-top:3rem; }
+.blog-home .notes-section>h2 { margin-bottom:1.5rem; }
+.blog-home .contents { margin-bottom:2rem; }
+.feed-empty { color:var(--ink-soft); }
+.blog-pagination { display:flex; flex-wrap:wrap; justify-content:space-between; gap:1rem; font-size:1rem; margin:2rem 0; }
+.landscape-art { margin:2.5rem 0; overflow:hidden; border-radius:.35rem; background:var(--surface); }
+.landscape-art img { display:block; width:100%; height:auto; aspect-ratio:2.4/1; object-fit:cover; }
+.service-copy+.landscape-art { max-width:46rem; margin:3rem 0; }
+@media(max-width:480px) { .landscape-art img { aspect-ratio:1.8/1; } .pinned-post .eyebrow { font-size:.7rem; } }

@@ -1,0 +1,4 @@
+{{ $art := resources.Get "images/colored-pencil-landscape.png" }}
+{{ $small := $art.Resize "480x webp q80" }}
+{{ $large := $art.Resize "960x webp q80" }}
+<figure class="landscape-art" aria-hidden="true"><img src="{{ $large.RelPermalink }}" srcset="{{ $small.RelPermalink }} 480w, {{ $large.RelPermalink }} 960w" sizes="(max-width: 768px) calc(100vw - 3rem), 720px" width="{{ $large.Width }}" height="{{ $large.Height }}" alt="" loading="lazy" decoding="async"></figure>

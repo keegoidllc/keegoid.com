@@ -1,61 +1,29 @@
 {{ define "main" }}
-  <main class="page" id="main-content" tabindex="-1">
-    <section class="home-hero" aria-labelledby="home-title">
-      <p class="eyebrow">Keegoid LLC · practical help with technology</p>
-      <h1 id="home-title">Practical AI.<br>Everyday IT.</h1>
-      <p class="hero-intro">Find a useful way to work with AI, put a defined idea into practice, or get help with the computer you rely on.</p>
-      <a class="button" href="{{ "/services/" | relURL }}">Find your starting point <span aria-hidden="true">↗</span></a>
-    </section>
-    <section class="service-overview" aria-labelledby="services-heading">
-      <div class="section-heading"><h2 id="services-heading">A clear place to start.</h2><a href="{{ "/services/" | relURL }}">All services <span aria-hidden="true">→</span></a></div>
-      {{ partial "service-cards.html" . }}
-    </section>
-    <section id="notes" class="notes-section" aria-labelledby="notes-heading"><h2 id="notes-heading">Notes</h2>
-    {{ $posts := (where .Site.RegularPages "Section" "posts").ByDate.Reverse }}
-
-    <!-- Contents — leader-dot index -->
-    {{ with $posts }}
-      <nav class="contents rise" style="--rise-d: 80ms" aria-label="Article index">
-        <h2 class="contents-heading">Contents</h2>
-        <ol>
-          {{ range . }}
-            <li>
-              <a class="contents-link" href="#{{ .File.TranslationBaseName }}">
-                <span class="what">{{ .Title }}</span>
-                <span class="leader" aria-hidden="true"></span>
-                <span class="when">{{ .Date.Format "Jan 2006" }}</span>
-              </a>
-            </li>
-          {{ end }}
-        </ol>
-      </nav>
+<main class="page blog-home" id="main-content" tabindex="-1">
+  {{ $posts := (where (where .Site.RegularPages "Section" "posts") "Params.demo" "ne" true).ByDate.Reverse }}
+  {{ range first 1 (where $posts "Params.pinned" true) }}
+    {{ partial "blog-post.html" (dict "page" . "level" 1 "pinned" true) }}
+  {{ end }}
+  <section id="notes" class="notes-section" aria-labelledby="notes-heading">
+    <h2 id="notes-heading">Latest notes</h2>
+    {{ $feed := where $posts "Params.pinned" "ne" true }}
+    {{ $paginator := .Paginate $feed }}
+    {{ with $paginator.Pages }}
+      <nav class="contents" aria-label="Article index"><ol>
+        {{ range . }}<li><a class="contents-link" href="#{{ .File.TranslationBaseName }}"><span class="what">{{ .Title }}</span><span class="leader" aria-hidden="true"></span><span class="when">{{ .Date.Format "Jan 2006" }}</span></a></li>{{ end }}
+      </ol></nav>
+      {{ range $i, $post := . }}
+        {{ if gt $i 0 }}<hr class="post-divider" aria-hidden="true">{{ end }}
+        {{ partial "blog-post.html" (dict "page" $post "level" 3 "pinned" false) }}
+      {{ end }}
+    {{ else }}
+      <p class="feed-empty">I'm starting with the introduction above. New notes will appear here as I publish them.</p>
     {{ end }}
-
-    <!-- Articles -->
-    {{ range $i, $p := $posts }}
-      {{ $delay := printf "--rise-d: %dms" (add 160 (mul $i 80)) }}
-      {{ if gt $i 0 }}<hr class="post-divider rise" style="{{ $delay | safeCSS }}" aria-hidden="true">{{ end }}
-      <article class="post rise" style="{{ $delay | safeCSS }}" id="{{ $p.File.TranslationBaseName }}">
-        <h2 class="post-title">{{ $p.Title }}</h2>
-        <div class="post-dates">
-          Published {{ $p.Date.Format "January 2, 2006" }}{{ if gt $p.Lastmod $p.Date }} · Updated {{ $p.Lastmod.Format "January 2, 2006" }}{{ end }}
-        </div>
-        <div class="post-content">
-          {{ $slug := $p.File.TranslationBaseName }}
-          {{ $p.Content
-             | replaceRE `id="fn:` (printf `id="%s-fn:` $slug)
-             | replaceRE `id="fnref:` (printf `id="%s-fnref:` $slug)
-             | replaceRE `href="#fn:` (printf `href="#%s-fn:` $slug)
-             | replaceRE `href="#fnref:` (printf `href="#%s-fnref:` $slug)
-             | safeHTML }}
-        </div>
-        {{ with $p.Params.background_image }}
-          <figure class="post-art">
-            <img src="{{ . }}" alt="" loading="lazy">
-          </figure>
-        {{ end }}
-      </article>
-    {{ end }}
-    </section>
-  </main>
+    {{ if gt $paginator.TotalPages 1 }}<nav class="blog-pagination" aria-label="More notes">
+      {{ with $paginator.Prev }}<a href="{{ .URL }}">← Newer notes</a>{{ end }}
+      <span>Page {{ $paginator.PageNumber }} of {{ $paginator.TotalPages }}</span>
+      {{ with $paginator.Next }}<a href="{{ .URL }}">Older notes →</a>{{ end }}
+    </nav>{{ end }}
+  </section>
+</main>
 {{ end }}
