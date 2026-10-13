@@ -1,8 +1,13 @@
 {{ define "main" }}
 <main class="page home-with-services" id="main-content" tabindex="-1">
-  <h1 class="visually-hidden">Keegoid — personal blog and practical services</h1>
+  <section class="home-hero" aria-labelledby="home-title">
+    <p class="eyebrow">Keegoid LLC · practical help with technology</p>
+    <h1 id="home-title">Practical AI.<br>Everyday IT.</h1>
+    <p class="hero-intro">Find a useful way to work with AI, put a defined idea into practice, or get help with the computer you rely on.</p>
+    <a class="button" href="{{ "/services/" | relURL }}">Find your starting point <span aria-hidden="true">↗</span></a>
+  </section>
   <section class="pinned-services" id="home-services" aria-labelledby="home-services-heading">
-    <header class="home-services-intro"><p class="eyebrow">Keegoid services</p><h2 id="home-services-heading">Choose your starting point.</h2>{{ with .Site.GetPage "/services" }}<div class="hero-intro">{{ .Content }}</div>{{ end }}</header>
+    <div class="section-heading"><h2 id="home-services-heading">A clear place to start.</h2><a href="{{ "/services/" | relURL }}">All services <span aria-hidden="true">→</span></a></div>
     {{ partial "service-cards.html" . }}
   </section>
   {{ $posts := (where (where .Site.RegularPages "Section" "posts") "Params.demo" "ne" true).ByDate.Reverse }}
