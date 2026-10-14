@@ -5,7 +5,7 @@
 {{ if and $entry $entry.url }}
   {{ if not (findRE `^https://buy\.stripe\.com/[A-Za-z0-9]+$` $entry.url) }}{{ errorf "Invalid Stripe checkout URL for %s" .File.TranslationBaseName }}{{ end }}
   {{ $url = $entry.url }}
-  {{ $note = "Continue to Stripe to prepay for this service. After payment, contact support@keegoid.com for next steps." }}
+  {{ $note = $entry.note | default "Continue to Stripe to prepay for this service. After payment, contact support@keegoid.com for next steps." }}
 {{ end }}
 <div class="get-started">
   <a class="button" href="{{ $url | safeURL }}">{{ .Params.cta_label | default "Get started" }} <span aria-hidden="true">↗</span></a>

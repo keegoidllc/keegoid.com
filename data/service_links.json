@@ -5,9 +5,19 @@
     "price_id": "price_1UPkWcDyALpXcTEqWHJx6PXv"
   },
   "business-ai-assessment": {
-    "url": "https://buy.stripe.com/8x23cv7xGc03h1ogIt9Zm01",
-    "product_id": "prod_VQbktkfJEBpmkU",
-    "price_id": "price_1UPkX0DyALpXcTEqb0j3fRQq"
+    "url": "https://buy.stripe.com/4gM14n5py8NReTgeAl9Zm02",
+    "product_id": "prod_VRAPXPnghGZexF",
+    "price_id": "price_1UQI4wDyALpXcTEqLSkCtxuH",
+    "note": "Continue to Stripe to prepay for the initial assessment only. The follow-up is optional and purchased separately. After payment, contact support@keegoid.com for scheduling.",
+    "follow_up": {
+      "url": "https://buy.stripe.com/4gM5kD4lufcfeTgcsd9Zm03",
+      "product_id": "prod_VRAQQhZYFH2YDD",
+      "price_id": "price_1UQI5ODyALpXcTEqnRsSmSCi",
+      "label": "Pay for the agreed follow-up",
+      "note": "Optional $500 USD + applicable tax. Purchase only after written scope is agreed. Larger integrations require a separate quote.",
+      "scope_subject": "Agree scope: Business AI small-workflow follow-up",
+      "terms_url": "/terms/ai-consulting/#business-implementation-follow-up"
+    }
   },
   "ai-implementation": {
     "url": "",
