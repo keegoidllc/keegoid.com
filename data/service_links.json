@@ -1,8 +1,18 @@
 {
   "personal-ai-session": {
-    "url": "https://buy.stripe.com/14A28r3hqaVZ5iGeAl9Zm00",
-    "product_id": "prod_VQbkYKiSq3Ha1s",
-    "price_id": "price_1UPkWcDyALpXcTEqWHJx6PXv"
+    "url": "https://buy.stripe.com/8x214nf088NR8uS8bX9Zm04",
+    "product_id": "prod_VRtf2cyx4Z2mNq",
+    "price_id": "price_1UQzroDyALpXcTEqkm2pKgri",
+    "note": "Continue to Stripe to prepay for the initial assessment only. Implementation is optional and purchased separately. After payment, contact support@keegoid.com for scheduling.",
+    "follow_up": {
+      "url": "https://buy.stripe.com/00waEX8BK3txbH42RD9Zm05",
+      "product_id": "prod_VRtflIf9UiQS8b",
+      "price_id": "price_1UQzsODyALpXcTEqEhanMe9S",
+      "label": "Pay for the agreed implementation",
+      "note": "Optional $150 USD + applicable tax. Purchase only after written scope is agreed.",
+      "scope_subject": "Agree scope: Personal AI implementation",
+      "terms_url": "/terms/ai-consulting/#personal-implementation-follow-up"
+    }
   },
   "business-ai-assessment": {
     "url": "https://buy.stripe.com/4gM14n5py8NReTgeAl9Zm02",
