@@ -1,0 +1,10 @@
+{{ $entry := index hugo.Data.service_links .Page.File.TranslationBaseName }}
+{{ with $entry.follow_up }}
+  {{ if not (findRE `^https://buy\.stripe\.com/[A-Za-z0-9]+$` .url) }}{{ errorf "Invalid follow-up checkout URL for %s" $.Page.File.TranslationBaseName }}{{ end }}
+  <div class="get-started follow-up-purchase">
+    {{ with .scope_subject }}<p><a href="{{ printf "mailto:support@keegoid.com?subject=%s" (replace (. | urlquery) "+" "%20") | safeURL }}">Agree the scope with Keegoid</a> before paying.</p>{{ end }}
+    <a class="button" href="{{ .url | safeURL }}">{{ .label }} <span aria-hidden="true">↗</span></a>
+    <p class="cta-note">{{ .note }}</p>
+    <a class="terms-link" href="{{ .terms_url | relURL }}">Read follow-up scope & terms</a>
+  </div>
+{{ else }}{{ errorf "Missing follow-up purchase for %s" .Page.File.TranslationBaseName }}{{ end }}
