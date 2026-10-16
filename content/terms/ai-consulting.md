@@ -5,11 +5,11 @@ description = "Included scope and payment structure for Keegoid LLC AI consultin
 outputs = ["HTML"]
 +++
 
-## Personal AI session
+## Personal AI assessment {#personal-ai-session}
 
-**$250 USD plus applicable tax, prepaid.** Includes a 60-minute virtual personal AI session, preparation, and a takeaway guide.
+**$100 USD plus applicable tax, prepaid.** Includes a 60-minute virtual personal AI assessment, preparation, a demonstration of useful AI opportunities around your goals, and a takeaway guide. The assessment stands on its own; implementation is optional and purchased separately.
 
-[Explore the personal AI session](/services/personal-ai-session/).
+[Explore the personal AI assessment](/services/personal-ai-session/).
 
 ## Business AI assessment
 
@@ -21,9 +21,15 @@ The initial assessment is a separate purchase. The implementation follow-up belo
 
 ## Cancellation and rescheduling
 
-For personal AI sessions and business AI assessments, contact [support@keegoid.com](mailto:support@keegoid.com?subject=AI%20session%20cancellation%20or%20rescheduling) to request cancellation or rescheduling. Cancel before the scheduled session or assessment begins for a full refund. If Keegoid cancels and you do not agree to a replacement time, your payment is refunded.
+For personal and business AI assessments, contact [support@keegoid.com](mailto:support@keegoid.com?subject=AI%20session%20cancellation%20or%20rescheduling) to request cancellation or rescheduling. Cancel before the scheduled session or assessment begins for a full refund. If Keegoid cancels and you do not agree to a replacement time, your payment is refunded.
 
 ## AI implementation
+
+### Personal implementation follow-up
+
+**$150 USD plus applicable tax, purchased separately.** This optional implementation after a personal assessment helps put an agreed personal AI use into practice. Agree the written scope, deliverables, acceptance criteria, timing, and cancellation/refund terms before purchase. Acceptance is confirmed in writing against those criteria. Work outside the agreed scope requires a separate quote and your approval.
+
+[Explore the optional personal implementation](/services/personal-ai-session/#optional-implementation).
 
 ### Business implementation follow-up
 
